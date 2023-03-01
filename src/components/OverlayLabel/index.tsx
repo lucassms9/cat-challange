@@ -7,7 +7,7 @@ type OverlayLabelProps = {
 };
 
 const OverlayLabel = ({ label, color }: OverlayLabelProps) => (
-  <View style={[styles.overlayLabel, { borderColor: color }]}>
+  <View testID='overlayLabelContainer' style={[styles.overlayLabel, { borderColor: color }]}>
     <Text style={[styles.overlayLabelText, { color }]}>{label}</Text>
   </View>
 );
