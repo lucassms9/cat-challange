@@ -9,7 +9,7 @@ type IconButtonProps = {
   icon: JSX.Element;
 };
 const IconButton = ({ onPress, icon }: IconButtonProps) => (
-  <View>
+  <View testID="iconButtonContainer">
     <TouchableOpacity
       style={[styles.singleButton]}
       onPress={onPress}
