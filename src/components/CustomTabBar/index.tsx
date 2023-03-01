@@ -1,10 +1,6 @@
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
-import {
-  TouchableOpacity,
-  View,
-  StyleSheet,
-  Dimensions,
-} from 'react-native';
+import { TouchableOpacity, View, StyleSheet, Dimensions } from 'react-native';
+import { colors } from '../../consts';
 
 import CatIcon from '../../icons/cat.svg';
 import ChatIcon from '../../icons/chat.svg';
@@ -19,12 +15,6 @@ export default function CustomTabBar({
     <View style={styles.container}>
       {state.routes.map((route, index: number) => {
         const { options } = descriptors[route.key];
-        const label =
-          options.tabBarLabel !== undefined
-            ? options.tabBarLabel
-            : options.title !== undefined
-            ? options.title
-            : route.name;
 
         const isFocused = state.index === index;
 
@@ -49,13 +39,13 @@ export default function CustomTabBar({
             style={{ flex: 1, alignItems: 'center' }}
           >
             {route.name === 'Home' && (
-              <CatIcon fill={isFocused ? '#EC537E' : '#434141'} />
+              <CatIcon fill={isFocused ? colors.main : colors.black} />
             )}
             {route.name === 'Chat' && (
-              <ChatIcon stroke={isFocused ? '#EC537E' : '#434141'} />
+              <ChatIcon stroke={isFocused ? colors.main : colors.black} />
             )}
             {route.name === 'Profile' && (
-              <UserIcon stroke={isFocused ? '#EC537E' : '#434141'} />
+              <UserIcon stroke={isFocused ? colors.main : colors.black} />
             )}
           </TouchableOpacity>
         );
