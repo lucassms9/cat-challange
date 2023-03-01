@@ -3,9 +3,8 @@ const colors = {
   white: '#fff',
   black: '#434141',
   gray: '#BFBFC0',
-  nope: '#E5566D',
-  like: '#4CCC93',
-  favorite: '#3CA3FF',
+  nope: '#E16359',
+  like: '#6BD88E',
 };
 
 export default colors;
